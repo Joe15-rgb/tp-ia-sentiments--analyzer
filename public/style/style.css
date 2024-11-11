@@ -1,0 +1,200 @@
+:root {
+  --neutre-color: #2196f3;
+  --positif-color: #66bb6a;
+  --negatif-color: #ef5350;
+  --color-text: rgb(85, 85, 85);
+  --background-color: rgb(255, 255, 255);
+  --test: #472d99;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: all 300ms ease 0s;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+}
+body {
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-text);
+  background: rgb(255, 255, 255);
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  padding: 1.5rem 0;
+  gap: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 660px;
+}
+
+.card-stats {
+  border-radius: 6px;
+  height: 100px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.card-stats:nth-child(1) {
+  background-color: var(--neutre-color);
+  color: #fff;
+}
+.card-stats:nth-child(2) {
+  background-color: var(--positif-color);
+  color: #fff;
+}
+.card-stats:nth-child(3) {
+  background-color: var(--negatif-color);
+  color: #fff;
+}
+
+.card-stats .icon {
+  background-color: #d8e5e730;
+  border-radius: 6px;
+  padding: 0.8rem;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 358px 285px;
+  padding: 1.5rem 0;
+  gap: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 660px;
+}
+
+.chart {
+  border-radius: 6px;
+  height: 100vh;
+  max-height: 300px;
+  overflow: hidden;
+  position: relative;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.messages {
+  border-radius: 6px;
+  width: 100%;
+  max-width: 660px;
+  padding: 1rem;
+  margin: 1rem auto;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+table tr,
+td,
+th {
+  padding: 0.5rem;
+}
+
+tr {
+  border: 1px solid #504e4e4b;
+}
+
+tr:nth-child(even) {
+  background-color: #f6fbff;
+}
+
+tbody td:nth-child(1),
+tbody td:nth-child(3),
+tbody td:nth-child(4) {
+  text-align: center;
+}
+table thead tr {
+  background-color: #000000c0;
+  color: #eee;
+}
+table thead tr th:nth-child(1) {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-bottom: 1px solid #504e4e4b;
+}
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 660px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+.contenaire-form {
+  border-radius: 6px;
+  width: 100%;
+  max-width: 660px;
+  padding: 1rem;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.contenaire-form textarea {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+.contenaire-form button {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(0, 149, 255);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 1px 0px 0px inset;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0px;
+  outline: none;
+  padding: 8px 0.8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.messages.neutre table tbody tr {
+  background-color: #dee9fd98;
+}
+.messages.positif table tbody tr {
+  background-color: #defdf1a1;
+}
+.messages.negatif table tbody tr {
+  background-color: #fddee388;
+}

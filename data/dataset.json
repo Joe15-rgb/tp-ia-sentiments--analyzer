@@ -1,0 +1,79 @@
+[
+    {
+        "input": "hello word",
+        "output": "neutre",
+        "score": 0
+    },
+    {
+        "input": "fuck you",
+        "output": "negatif",
+        "score": -2
+    },
+    {
+        "input": "I love yoi",
+        "output": "positif",
+        "score": 0.6666666666666666
+    },
+    {
+        "input": "you are happy",
+        "output": "positif",
+        "score": 1
+    },
+    {
+        "input": "how's it going",
+        "output": "neutre",
+        "score": 0
+    },
+    {
+        "input": "so long",
+        "output": "negatif",
+        "score": -0.5
+    },
+    {
+        "input": "I'm in anger with you",
+        "output": "negatif",
+        "score": -0.5
+    },
+    {
+        "input": "I hate you",
+        "output": "negatif",
+        "score": -1
+    },
+    {
+        "input": "I fuck you",
+        "output": "negatif"
+    },
+    {
+        "input": "big ass",
+        "output": "negatif"
+    },
+    {
+        "input": "fuck",
+        "output": "negatif"
+    },
+    {
+        "input": "Where do you from",
+        "output": "neutre",
+        "score": 0
+    },
+    {
+        "input": "how do you feel",
+        "output": "negatif",
+        "score": 0.25
+    },
+    {
+        "input": "I want you",
+        "output": "negatif",
+        "score": 0.3333333333333333
+    },
+    {
+        "input": "🍆🍑",
+        "output": "negatif",
+        "score": 0.3333333333333333
+    },
+    {
+        "input": "When I was dead",
+        "output": "negatif",
+        "score": -0.75
+    }
+]

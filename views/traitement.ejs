@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Analyser des Sentiments des messages</h1>
+    </center>
+    <div class="stats">
+        <div class="card-stats">
+            <div class="icon">
+                <h1>😐</h1>
+            </div>
+            <div class="content">
+                <b>Sentiments Neutre</b>
+                <h3>
+                    <%= Math.floor(counteSentiments.neutre / data.length * 100)%> %
+                </h3>
+            </div>
+        </div>
+        <div class="card-stats">
+            <div class="icon">
+                <h1>😀</h1>
+            </div>
+            <div class="content">
+                <b>Sentiments Positif</b>
+                <h3>
+                    <%= Math.floor(counteSentiments.positif / data.length * 100) %> %
+                </h3>
+            </div>
+        </div>
+        <div class="card-stats">
+            <div class="icon">
+                <h1>😞</h1>
+            </div>
+            <div class="content">
+                <b>Sentiments Negatif</b>
+                <h3>
+                    <%= Math.floor(counteSentiments.negatif / data.length * 100) %> %
+                </h3>
+            </div>
+        </div>
+    </div>
+    <section class="charts">
+        <div class="chart">
+            <canvas id="myChart" width="500" height="420"></canvas>
+        </div>
+        <div class="chart">
+
+            <canvas id="myChart2" width="00" height="450"></canvas>
+        </div>
+    </section>
+    <section class="messages">
+        <h2 style="padding: 1.5rem 0;">Liste des messages analyses</h2>
+        <h3>Total sentiments : <%= data.length %>
+        </h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Message</th>
+                    <th>Sentiment</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(msg=>{%>
+                    <tr>
+                        <td>
+
+                            <%= msg.output==="positif" ? "😀" : msg.output==="negatif" ? "😞" : "😐" %>
+                        </td>
+                        <td>
+                            <%= msg.input%>
+                        </td>
+                        <td>
+                            <%= msg.output%>
+                        </td>
+                        <td>
+                            <%= msg.score%>
+                        </td>
+                    </tr>
+                    <%})%>
+            </tbody>
+        </table>
+    </section>
+    <% const outputs=["neutre", "positif" , "negatif" ]%>
+
+        <% outputs.forEach(s=> {%>
+            <section class="messages <%=s%>">
+                <h4 style="padding: 1.5rem 0;">Sentiment <%= s%>
+                </h4>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Message</th>
+                            <th>Sentiment</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% data.forEach(msg=>{%>
+                            <%if(msg.output=== s ){%>
+                                <tr>
+                                    <td>
+
+                                        <%= msg.output==="positif" ? "😀" : msg.output==="negatif" ? "😞" : "😐" %>
+                                    </td>
+                                    <td>
+                                        <%= msg.input%>
+                                    </td>
+                                    <td>
+                                        <%= msg.output%>
+                                    </td>
+                                    <td>
+                                        <%= msg.score%>
+                                    </td>
+                                </tr>
+
+                                <%}%>
+                                    <%})%>
+                    </tbody>
+                </table>
+            </section>
+            <%})%>
+
+                <section class="messages">
+                    <h4 style="padding: 1.5rem 0;">Sentiment sexual
+                    </h4>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Message</th>
+                                <th>Sentiment</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% sexualsMessages.forEach(el=> { %>
+                                <% if (el.score[0].label=="sexual" ) { %>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <%= el.input %>
+                                        </td>
+                                        <td>
+                                            <%= el.output %>
+                                        </td>
+                                        <td>
+                                            <%= el.score[0].value %>
+                                        </td>
+                                    </tr>
+                                    <% } %>
+                                        <% }) %>
+                        </tbody>
+                    </table>
+                </section>
+
+
+                <script src="./js/chart.min.js"></script>
+                <script>
+                    var ctx = document.getElementById("myChart2").getContext("2d");
+                    var polarAreaChart = new Chart(ctx, {
+                        type: "polarArea",
+                        data: {
+                            labels: ["Negatif", "Positif", "Neutre"],
+                            datasets: [
+                                {
+                                    data: [parseInt("<%= counteSentiments.negatif %>"),
+                                    parseInt("<%= counteSentiments.positif %>"),
+                                    parseInt("<%= counteSentiments.neutre %>")],
+                                    label: "Chart For Sentiment analyse",
+                                    backgroundColor: ["#EF5350", "#66BB6A", "#2196F3"],
+                                },
+                            ],
+                        },
+                        options: {
+                            scale: {
+                                ticks: {
+                                    min: 0,
+                                    max: 50,
+                                },
+                            },
+                            plugins: {
+                                legend: {
+                                    display: true,
+                                    labels: {
+                                        color: "black",
+                                        font: {
+                                            size: 8,
+                                            weight: "bold",
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    });
+                    var ctx = document.getElementById("myChart").getContext("2d");
+                    var barChart = new Chart(ctx, {
+                        type: "bar",
+                        data: {
+                            labels: ["Negatif", "Positif", "Neutre"],
+                            datasets: [
+                                {
+                                    label: "Chart For Sentiment analyse",
+                                    data: [parseInt("<%= counteSentiments.negatif %>"),
+                                    parseInt("<%= counteSentiments.positif %>"),
+                                    parseInt("<%= counteSentiments.neutre %>")],
+                                    backgroundColor: ["#EF5350", "#66BB6A", "#2196F3"],
+                                },
+                            ],
+                        },
+                        options: {
+                            scale: {
+                                ticks: {
+                                    min: 0,
+                                    max: 50,
+                                },
+                            },
+                        },
+                    });
+                </script>
+</body>
+
+</html>

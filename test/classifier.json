@@ -1,0 +1,402 @@
+{
+    "classifier": {
+        "classFeatures": {
+            "sexual": {
+                "0": 6,
+                "1": 4,
+                "2": 4,
+                "3": 4,
+                "4": 3,
+                "5": 3,
+                "6": 3,
+                "7": 3,
+                "8": 2,
+                "9": 2,
+                "10": 2,
+                "11": 2,
+                "12": 2,
+                "13": 2,
+                "14": 2,
+                "15": 2
+            },
+            "threat": {
+                "0": 5,
+                "11": 6,
+                "16": 3,
+                "17": 2,
+                "18": 4,
+                "19": 3,
+                "20": 2,
+                "21": 2,
+                "22": 2,
+                "23": 2
+            },
+            "neutre": {
+                "11": 2,
+                "24": 2,
+                "25": 2,
+                "29": 2,
+                "30": 2,
+                "31": 2,
+                "32": 2,
+                "35": 2,
+                "36": 2,
+                "37": 2
+            },
+            "negatif": {
+                "0": 5,
+                "4": 2,
+                "11": 6,
+                "17": 2,
+                "18": 2,
+                "20": 2,
+                "21": 2,
+                "22": 2,
+                "23": 2,
+                "29": 2,
+                "33": 2,
+                "34": 2,
+                "36": 2,
+                "38": 2,
+                "39": 2,
+                "40": 2,
+                "41": 2
+            },
+            "positif": {
+                "0": 2,
+                "1": 2,
+                "11": 2,
+                "26": 2,
+                "27": 2,
+                "28": 2
+            }
+        },
+        "classTotals": {
+            "sexual": 15,
+            "threat": 10,
+            "neutre": 4,
+            "negatif": 8,
+            "positif": 3
+        },
+        "totalExamples": 36,
+        "smoothing": 1
+    },
+    "docs": [
+        {
+            "label": "sexual",
+            "text": [
+                "I",
+                "love",
+                "your",
+                "pussi"
+            ]
+        },
+        {
+            "label": "sexual",
+            "text": [
+                "pussi"
+            ]
+        },
+        {
+            "label": "sexual",
+            "text": [
+                "fuck"
+            ]
+        },
+        {
+            "label": "sexual",
+            "text": [
+                "I",
+                "love",
+                "your",
+                "ass"
+            ]
+        },
+        {
+            "label": "sexual",
+            "text": [
+                "I",
+                "love",
+                "your",
+                "vagin"
+            ]
+        },
+        {
+            "label": "sexual",
+            "text": [
+                "vagin"
+            ]
+        },
+        {
+            "label": "sexual",
+            "text": [
+                "dick"
+            ]
+        },
+        {
+            "label": "sexual",
+            "text": [
+                "I",
+                "have",
+                "a",
+                "big",
+                "dick"
+            ]
+        },
+        {
+            "label": "sexual",
+            "text": [
+                "I",
+                "fuck",
+                "you"
+            ]
+        },
+        {
+            "label": "sexual",
+            "text": [
+                "pussi",
+                "wet"
+            ]
+        },
+        {
+            "label": "sexual",
+            "text": [
+                "sex"
+            ]
+        },
+        {
+            "label": "sexual",
+            "text": [
+                "porno"
+            ]
+        },
+        {
+            "label": "sexual",
+            "text": [
+                "xxx"
+            ]
+        },
+        {
+            "label": "sexual",
+            "text": [
+                "ass"
+            ]
+        },
+        {
+            "label": "threat",
+            "text": [
+                "kill"
+            ]
+        },
+        {
+            "label": "threat",
+            "text": [
+                "dead"
+            ]
+        },
+        {
+            "label": "threat",
+            "text": [
+                "hate"
+            ]
+        },
+        {
+            "label": "threat",
+            "text": [
+                "die"
+            ]
+        },
+        {
+            "label": "threat",
+            "text": [
+                "I",
+                "kill",
+                "you"
+            ]
+        },
+        {
+            "label": "threat",
+            "text": [
+                "you",
+                "die"
+            ]
+        },
+        {
+            "label": "threat",
+            "text": [
+                "I",
+                "m",
+                "in",
+                "anger",
+                "with",
+                "you"
+            ]
+        },
+        {
+            "label": "threat",
+            "text": [
+                "I",
+                "hate",
+                "you"
+            ]
+        },
+        {
+            "label": "threat",
+            "text": [
+                "I",
+                "hate",
+                "you"
+            ]
+        },
+        {
+            "label": "neutre",
+            "text": [
+                "hello",
+                "word"
+            ]
+        },
+        {
+            "label": "negatif",
+            "text": [
+                "fuck",
+                "you"
+            ]
+        },
+        {
+            "label": "positif",
+            "text": [
+                "I",
+                "love",
+                "yoi"
+            ]
+        },
+        {
+            "label": "positif",
+            "text": [
+                "you",
+                "ar",
+                "happi"
+            ]
+        },
+        {
+            "label": "neutre",
+            "text": [
+                "how",
+                "s",
+                "it",
+                "go"
+            ]
+        },
+        {
+            "label": "negatif",
+            "text": [
+                "so",
+                "long"
+            ]
+        },
+        {
+            "label": "negatif",
+            "text": [
+                "I",
+                "m",
+                "in",
+                "anger",
+                "with",
+                "you"
+            ]
+        },
+        {
+            "label": "negatif",
+            "text": [
+                "I",
+                "hate",
+                "you"
+            ]
+        },
+        {
+            "label": "neutre",
+            "text": [
+                "where",
+                "do",
+                "you",
+                "from"
+            ]
+        },
+        {
+            "label": "negatif",
+            "text": [
+                "how",
+                "do",
+                "you",
+                "feel"
+            ]
+        },
+        {
+            "label": "negatif",
+            "text": [
+                "I",
+                "want",
+                "you"
+            ]
+        },
+        {
+            "label": "negatif",
+            "text": [
+                "when",
+                "I",
+                "wa",
+                "dead"
+            ]
+        }
+    ],
+    "features": {
+        "I": 14,
+        "love": 4,
+        "your": 3,
+        "pussi": 3,
+        "fuck": 3,
+        "ass": 2,
+        "vagin": 2,
+        "dick": 2,
+        "have": 1,
+        "a": 1,
+        "big": 1,
+        "you": 13,
+        "wet": 1,
+        "sex": 1,
+        "porno": 1,
+        "xxx": 1,
+        "kill": 2,
+        "dead": 2,
+        "hate": 4,
+        "die": 2,
+        "m": 2,
+        "in": 2,
+        "anger": 2,
+        "with": 2,
+        "hello": 1,
+        "word": 1,
+        "yoi": 1,
+        "ar": 1,
+        "happi": 1,
+        "how": 2,
+        "s": 1,
+        "it": 1,
+        "go": 1,
+        "so": 1,
+        "long": 1,
+        "where": 1,
+        "do": 2,
+        "from": 1,
+        "feel": 1,
+        "want": 1,
+        "when": 1,
+        "wa": 1
+    },
+    "stemmer": {},
+    "lastAdded": 35,
+    "events": {
+        "_events": {},
+        "_eventsCount": 1
+    }
+}

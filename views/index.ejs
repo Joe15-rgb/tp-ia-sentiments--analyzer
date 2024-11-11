@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <h1>Hello IA</h1>
+    <img src="/assets/illustration.png" alt="illustration" width="250" height="250">
+    <p>Bienvenu(e) dans l'analyseur de sentiments</p>
+  </header>
+  <section class="contenaire-form">
+    <button style="background-color: #FFB300;" onclick="getTheFile()">Open file</button>
+    <form action="/traitement" method="post">
+      <div class="field">
+        <textarea name="messages" id="messages" style="height: 160px;" placeholder="Entrez vos messages..."></textarea>
+      </div>
+      <!-- <div class=" field">
+          <input type="file" name="data" id="data" />
+        </div> -->
+      <button type="submit">Analyser</button>
+    </form>
+  </section>
+  <script>
+    const pickerOpts = {
+      types: [
+        {
+          description: "Only JSON",
+          accept: {
+            "image/*": [".json"],
+          },
+        },
+      ],
+      excludeAcceptAllOption: true,
+      multiple: false,
+    };
+
+    async function getTheFile() {
+      // Open file picker and destructure the result the first handle
+      const [fileHandle] = await window.showOpenFilePicker(pickerOpts);
+
+      // get file contents
+      const fileData = await fileHandle.getFile();
+      const text = await fileData.text()
+
+
+      document.getElementById("messages").value = text
+    }
+
+  </script>
+</body>
+
+</html>
